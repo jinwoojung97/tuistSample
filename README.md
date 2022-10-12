@@ -1,7 +1,7 @@
 # tuistSample
 
 1.tuist 설치
-curl -Ls https://install.tuist.io | bash
+  curl -Ls https://install.tuist.io | bash
 
 2. tuist clean -> tuist fetch -> tuist generate
 
