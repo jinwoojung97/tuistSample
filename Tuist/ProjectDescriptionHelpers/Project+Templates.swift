@@ -85,72 +85,23 @@ extension Scheme {
         )
     }
 }
-//extension Project {
-//    /// Helper function to create the Project for this ExampleApp
-//    public static func app(name: String, platform: Platform, additionalTargets: [String]) -> Project {
-//        var targets = makeAppTargets(name: name,
-//                                     platform: platform,
-//                                     dependencies: additionalTargets.map { TargetDependency.target(name: $0) })
-//        targets += additionalTargets.flatMap({ makeFrameworkTargets(name: $0, platform: platform) })
-//        return Project(name: name,
-//                       organizationName: "tuist.io",
-//                       targets: targets)
-//    }
-//
-//    // MARK: - Private
-//
-//    /// Helper function to create a framework target and an associated unit test target
-//    private static func makeFrameworkTargets(name: String, platform: Platform) -> [Target] {
-//        let sources = Target(name: name,
-//                platform: platform,
-//                product: .framework,
-//                bundleId: "io.tuist.\(name)",
-//                infoPlist: .default,
-//                sources: ["Targets/\(name)/Sources/**"],
-//                resources: [],
-//                dependencies: [])
-//        let tests = Target(name: "\(name)Tests",
-//                platform: platform,
-//                product: .unitTests,
-//                bundleId: "io.tuist.\(name)Tests",
-//                infoPlist: .default,
-//                sources: ["Targets/\(name)/Tests/**"],
-//                resources: [],
-//                dependencies: [.target(name: name)])
-//        return [sources, tests]
-//    }
-//
-//    /// Helper function to create the application target and the unit test target.
-//    private static func makeAppTargets(name: String, platform: Platform, dependencies: [TargetDependency]) -> [Target] {
-//        let platform: Platform = platform
-//        let infoPlist: [String: InfoPlist.Value] = [
-//            "CFBundleShortVersionString": "1.0",
-//            "CFBundleVersion": "1",
-//            "UIMainStoryboardFile": "",
-//            "UILaunchStoryboardName": "LaunchScreen"
-//            ]
-//
-//        let mainTarget = Target(
-//            name: name,
-//            platform: platform,
-//            product: .app,
-//            bundleId: "io.tuist.\(name)",
-//            infoPlist: .extendingDefault(with: infoPlist),
-//            sources: ["Targets/\(name)/Sources/**"],
-//            resources: ["Targets/\(name)/Resources/**"],
-//            dependencies: dependencies
-//        )
-//
-//        let testTarget = Target(
-//            name: "\(name)Tests",
-//            platform: platform,
-//            product: .unitTests,
-//            bundleId: "io.tuist.\(name)Tests",
-//            infoPlist: .default,
-//            sources: ["Targets/\(name)/Tests/**"],
-//            dependencies: [
-//                .target(name: "\(name)")
-//        ])
-//        return [mainTarget, testTarget]
-//    }
-//}
+
+/// import 할 수 있게 target 으로
+public extension TargetDependency {
+    static let rxSwift: TargetDependency         = .external(name: "RxSwift")
+    static let rxCocoa: TargetDependency         = .external(name: "RxCocoa")
+    static let rxRelay: TargetDependency         = .external(name: "RxRelay")
+    static let rxDataSources: TargetDependency   = .external(name: "RxDataSources")
+    static let alamofire: TargetDependency       = .external(name: "Alamofire")
+    static let moya: TargetDependency            = .external(name: "Moya")
+    static let rxMoya: TargetDependency          = .external(name: "RxMoya")
+    static let snapKit: TargetDependency         = .external(name: "SnapKit")
+    static let then: TargetDependency            = .external(name: "Then")
+    static let kingfisher: TargetDependency      = .external(name: "Kingfisher")
+    static let rxKeyboard: TargetDependency      = .external(name: "RxKeyboard")
+    static let lottie: TargetDependency          = .external(name: "Lottie")
+    static let rxGesture: TargetDependency       = .external(name: "RxGesture")
+    static let swiftyJson: TargetDependency      = .external(name: "SwiftyJSON")
+    static let toast: TargetDependency           = .external(name: "Toast")
+    static let firebaseAnalytics: TargetDependency = .external(name: "FirebaseAnalytics")
+}

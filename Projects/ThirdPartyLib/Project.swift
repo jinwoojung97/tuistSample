@@ -12,5 +12,22 @@ let project = Project.makeModule(
     name: "ThirdPartyLib",
     product: .staticFramework,
     packages: [],
-    dependencies: []
+    dependencies: [
+        .rxSwift,
+        .rxCocoa,
+        .rxRelay,
+        .rxDataSources,
+        .alamofire,
+        .moya,
+        .rxMoya,
+        .snapKit,
+        .then,
+        .kingfisher,
+        .rxKeyboard,
+        .lottie,
+        .rxGesture,
+        .swiftyJson,
+        .toast,
+        .firebaseAnalytics
+    ]
 )
