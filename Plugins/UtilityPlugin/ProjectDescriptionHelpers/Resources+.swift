@@ -1,6 +1,6 @@
 //
-//  Resource+.swift
-//  ProjectDescriptionHelpers
+//  Resources+.swift
+//  UtilityPlugin
 //
 //  Created by inforex on 2022/10/13.
 //
