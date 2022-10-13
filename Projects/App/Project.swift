@@ -16,6 +16,6 @@ let project = Project.makeModule(
     dependencies: [
         .Module.feature
     ],
-    resources: ["Resources/**"],
+    resources: .default,
     infoPlist: .file(path: "Support/Info.plist")
 )

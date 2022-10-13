@@ -14,5 +14,5 @@ let project = Project.makeModule(
     dependencies: [
         .Module.service
     ],
-    resources: ["Resources/**"]
+    resources: .default
 )
