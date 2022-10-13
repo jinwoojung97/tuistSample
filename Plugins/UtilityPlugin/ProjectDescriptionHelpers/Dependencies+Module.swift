@@ -6,7 +6,7 @@
 //
 
 import ProjectDescription
-import ProjectDescriptionHelpers
+//import ProjectDescriptionHelpers
 
 
 /// Dependencies + Module
