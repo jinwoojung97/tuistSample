@@ -12,7 +12,7 @@ let project = Project.makeModule(
     name: "Feature",
     product: .staticFramework,
     dependencies: [
-        .project(target: "Service", path: .relativeToRoot("Projects/Service"))
+        .Module.service
     ],
     resources: ["Resources/**"]
 )
