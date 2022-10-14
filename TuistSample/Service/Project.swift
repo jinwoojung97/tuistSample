@@ -9,9 +9,8 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 import UtilityPlugin
 
-let project = Project.makeModule(
+let project = Project.framework(
     name: "Service",
-    product: .staticFramework,
     dependencies: [
         .Module.thirdPartyLib
     ]

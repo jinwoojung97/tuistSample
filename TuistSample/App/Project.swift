@@ -9,11 +9,8 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 import UtilityPlugin
 
-
-let project = Project.makeModule(
+let project = Project.app(
     name: "App",
-    platform: .iOS,
-    product: .app,
     dependencies: [
         .Module.feature
     ],

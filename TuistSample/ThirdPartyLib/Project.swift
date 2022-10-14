@@ -9,10 +9,8 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 import UtilityPlugin
 
-let project = Project.makeModule(
+let project = Project.framework(
     name: "ThirdPartyLib",
-    product: .staticFramework,
-    packages: [],
     dependencies: [
         .rxSwift,
         .rxCocoa,
@@ -29,6 +27,5 @@ let project = Project.makeModule(
         .rxGesture,
         .swiftyJson,
         .toast
-//        .firebaseAnalytics
     ]
 )

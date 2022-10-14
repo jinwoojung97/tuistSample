@@ -9,11 +9,9 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 import UtilityPlugin
 
-let project = Project.makeModule(
+let project = Project.framework(
     name: "Feature",
-    product: .staticFramework,
     dependencies: [
         .Module.service
-    ],
-    resources: .default
+    ]
 )
