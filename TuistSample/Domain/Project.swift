@@ -10,10 +10,8 @@ import ProjectDescriptionHelpers
 import UtilityPlugin
 
 let project = Project.framework(
-    name: "Service",
+    name: "Domain",
     dependencies: [
-        .Module.domain,
-        .Module.repository,
         .Module.util,
         .Module.thirdPartyLib
     ]

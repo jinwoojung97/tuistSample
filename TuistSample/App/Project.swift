@@ -12,7 +12,12 @@ import UtilityPlugin
 let project = Project.app(
     name: "App",
     dependencies: [
-        .Module.feature
+        .Module.domain,
+        .Module.presentation,
+        .Module.repository,
+        .Module.service,
+        .Module.thirdPartyLib,
+        .Module.util
     ],
     resources: .default
 )

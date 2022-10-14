@@ -1,8 +1,8 @@
 //
-//  Projects.swift
+//  Project.swift
 //  ProjectDescriptionHelpers
 //
-//  Created by inforex on 2022/10/12.
+//  Created by inforex on 2022/10/14.
 //
 
 import ProjectDescription
@@ -10,8 +10,10 @@ import ProjectDescriptionHelpers
 import UtilityPlugin
 
 let project = Project.framework(
-    name: "Feature",
+    name: "Repository",
     dependencies: [
-        .Module.service
+        .Module.domain,
+        .Module.util,
+        .Module.thirdPartyLib
     ]
 )

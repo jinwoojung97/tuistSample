@@ -11,8 +11,11 @@ let workspace = Workspace(
     name: "TuistSample",
     projects: [
         "TuistSample/App",
-        "TuistSample/Feature",
+        "TuistSample/Domain",
+        "TuistSample/Presentation",
+        "TuistSample/Repository",
         "TuistSample/Service",
+        "TuistSample/Util",
         "TuistSample/ThirdPartyLib"
     ]
 )
