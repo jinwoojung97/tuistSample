@@ -8,10 +8,7 @@ import UtilityPlugin
 ///
 public extension Project {
 
-    static let bundleId = "com.jinwoo.tuistSample"
-    static let deploymentTarget : ProjectDescription.DeploymentTarget =
-        .iOS(targetVersion: "14.0", devices: [.iphone, .ipad])
-    
+    static let bundleId = "com.test.tuistSample"
 
     // MARK: make App
 
@@ -29,7 +26,7 @@ public extension Project {
         )
     }
 
-    // MARK: make Framework(project)
+    // MARK: make Framework(from a Project)
 
     static func framework(
         name: String,
@@ -62,8 +59,8 @@ public extension Project {
                     platform: .iOS,
                     product: product,
                     bundleId: "\(bundleId).\(name)",
-                    deploymentTarget: deploymentTarget,
-                    infoPlist: .default1,
+                    deploymentTarget: .defaultTarget,
+                    infoPlist: .defaultFile,
                     sources: ["Sources/**"],
                     resources: resources,
                     dependencies: dependencies
@@ -73,8 +70,8 @@ public extension Project {
                     platform: .iOS,
                     product: .unitTests,
                     bundleId: "\(bundleId).\(name)Tests",
-                    deploymentTarget: deploymentTarget,
-                    infoPlist: .default1,
+                    deploymentTarget: .defaultTarget,
+                    infoPlist: .defaultFile,
                     sources: ["Tests/**"],
                     dependencies: [.target(name: name)]
                 )

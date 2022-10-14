@@ -26,5 +26,4 @@ public extension TargetDependency {
     static let rxGesture: TargetDependency       = .external(name: "RxGesture")
     static let swiftyJson: TargetDependency      = .external(name: "SwiftyJSON")
     static let toast: TargetDependency           = .external(name: "Toast")
-//    static let firebaseAnalytics: TargetDependency = .external(name: "FirebaseAnalytics")
 }

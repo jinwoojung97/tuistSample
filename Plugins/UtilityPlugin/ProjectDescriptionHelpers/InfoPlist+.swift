@@ -10,5 +10,5 @@ import ProjectDescription
 
 public extension ProjectDescription.InfoPlist {
 
-    static let `default1`: ProjectDescription.InfoPlist = .file(path: .relativeToRoot("Support/Info.plist"))
+    static let `defaultFile`: ProjectDescription.InfoPlist = .file(path: .relativeToRoot("Support/Info.plist"))
 }
