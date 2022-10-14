@@ -1,4 +1,5 @@
 # tuistSample
+tuist를 활용한 clean architecture
 
 ### Usage
 
@@ -15,22 +16,28 @@
 ├── Plugins
 │   └── UtilityPlugin
 ├── Project.swift
-├── Projects
-│   ├── App
-│   ├── Feature
-│   ├── Service
-│   └── ThirdPartyLib
 ├── README.md
+├── Support
+│   └── Info.plist
 ├── Tuist
 │   ├── Config.swift
 │   ├── Dependencies
 │   ├── Dependencies.swift
 │   └── ProjectDescriptionHelpers
+├── TuistSample
+│   ├── App
+│   ├── Domain
+│   ├── Presentation
+│   ├── Repository
+│   ├── Service
+│   ├── ThirdPartyLib
+│   └── Util
 ├── TuistSample.xcworkspace
 │   ├── contents.xcworkspacedata
 │   ├── xcshareddata
 │   └── xcuserdata
-└── Workspace.swift
+├── Workspace.swift
+└── graph.png
 ```
 
 ### Dependency
