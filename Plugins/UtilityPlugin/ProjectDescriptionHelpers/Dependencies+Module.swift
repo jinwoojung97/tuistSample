@@ -15,7 +15,7 @@ extension TargetDependency {
 }
 
 extension TargetDependency.Module {
-    public static let feature = TargetDependency.project(target: "Feature", path: .relativeToRoot("Projects/Feature"))
-    public static let service = TargetDependency.project(target: "Service", path: .relativeToRoot("Projects/Service"))
-    public static let thirdPartyLib = TargetDependency.project(target: "ThirdPartyLib", path: .relativeToRoot("Projects/ThirdPartyLib"))
+    public static let feature = TargetDependency.project(target: "Feature", path: .relativeToRoot("TuistSample/Feature"))
+    public static let service = TargetDependency.project(target: "Service", path: .relativeToRoot("TuistSample/Service"))
+    public static let thirdPartyLib = TargetDependency.project(target: "ThirdPartyLib", path: .relativeToRoot("TuistSample/ThirdPartyLib"))
 }
