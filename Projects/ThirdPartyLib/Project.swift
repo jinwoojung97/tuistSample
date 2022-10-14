@@ -28,7 +28,7 @@ let project = Project.makeModule(
         .lottie,
         .rxGesture,
         .swiftyJson,
-        .toast,
-        .firebaseAnalytics
+        .toast
+//        .firebaseAnalytics
     ]
 )
