@@ -1,4 +1,5 @@
 import ProjectDescription
+import UtilityPlugin
 
 /// Project helpers are functions that simplify the way you define your project.
 /// Share code to create targets, settings, dependencies,
@@ -18,15 +19,13 @@ public extension Project {
         name: String,
         product: Product = .app,
         dependencies: [TargetDependency] = [],
-        resources: ProjectDescription.ResourceFileElements? = nil,
-        infoPlist: InfoPlist = .default
+        resources: ProjectDescription.ResourceFileElements? = nil
     ) -> Project {
         return project(
             name: name,
             product: product,
             dependencies: dependencies,
-            resources: resources,
-            infoPlist: infoPlist
+            resources: resources
         )
     }
 
@@ -36,15 +35,13 @@ public extension Project {
         name: String,
         product: Product = .framework,
         dependencies: [TargetDependency] = [],
-        resources: ProjectDescription.ResourceFileElements? = nil,
-        infoPlist: InfoPlist = .default
+        resources: ProjectDescription.ResourceFileElements? = nil
     ) -> Project {
         return project(
             name: name,
             product: product,
             dependencies: dependencies,
-            resources: resources,
-            infoPlist: infoPlist
+            resources: resources
         )
     }
 
@@ -54,8 +51,7 @@ public extension Project {
         name: String,
         product: Product,
         dependencies: [TargetDependency] = [],
-        resources: ProjectDescription.ResourceFileElements? = nil,
-        infoPlist: InfoPlist = .default
+        resources: ProjectDescription.ResourceFileElements? = nil
     ) -> Project{
         return Project(
             name: name,
@@ -67,7 +63,7 @@ public extension Project {
                     product: product,
                     bundleId: "\(bundleId).\(name)",
                     deploymentTarget: deploymentTarget,
-                    infoPlist: infoPlist,
+                    infoPlist: .default1,
                     sources: ["Sources/**"],
                     resources: resources,
                     dependencies: dependencies
@@ -78,7 +74,7 @@ public extension Project {
                     product: .unitTests,
                     bundleId: "\(bundleId).\(name)Tests",
                     deploymentTarget: deploymentTarget,
-                    infoPlist: infoPlist,
+                    infoPlist: .default1,
                     sources: ["Tests/**"],
                     dependencies: [.target(name: name)]
                 )
